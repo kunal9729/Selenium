@@ -29,6 +29,8 @@ product_price_dict = {}
 for i in range(len(product_elements)):
     product_name = product_elements[i].text
     try:
+        
+    
         # Get the price and convert to int, handle missing prices
         product_price = int(price_elements[i].text.replace(',', ''))
     except (IndexError, ValueError):
@@ -46,3 +48,5 @@ for product, price in sorted_products:
 
 # Close the browser
 driver.quit()
+
+/* commit already done for future reference*/
